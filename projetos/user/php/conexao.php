@@ -3,6 +3,6 @@
     session_start();
   }
     
-    $con = mysqli_connect("localhost","root","","php");
+    $con = mysqli_connect("localhost","root","","yonek");
 
 ?>

@@ -12,7 +12,14 @@ session_start();
       if(mysqli_num_rows($qu) < 4){
             $ivoto = "insert into voto (candidato) values('$voto')";
             mysqli_query($con, $ivoto);
-            header('location: voto.php'); 
+            
+
+            if($ivoto == 1){
+                header('location: voto.php'); 
+            }else{
+                $_SESSION['msg'] = "<script>alert('O voto é até 1!');</script>";
+            }
+
        }else{
             $_SESSION['msg'] = "<script>alert('O limite de candidatos até 4!');</script>";
        }
